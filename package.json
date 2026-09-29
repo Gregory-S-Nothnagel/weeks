@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple Node.js app",
   "dependencies": {
-	  "postgresql": "^5.1.0"
+	  "postgresql": "^18.6"
 	},
   "author": "Your Name",
   "license": "ISC"

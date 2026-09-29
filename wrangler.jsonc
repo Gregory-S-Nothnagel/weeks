@@ -7,19 +7,22 @@
     "enabled": true
   },
 
-  // Add nodejs_compat compatibility flag to support common database drivers
+  // Add this section
   "compatibility_flags": [
     "nodejs_compat"
   ],
-
-  // Add this to your wrangler.jsonc
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "8e76ad96258f4f89b225538086c20fbc",
-      
-      // Optional. Can be used to connect to a local database for local development with `wrangler dev`
-      "localConnectionString": "<LOCAL_CONNECTION_STRING_FOR_LOCAL_DEVELOPMENT_HERE>"
+      "id": "442418eda9534b3aa746c83c4a70c438",
+
+      // Optional. Can be used to connect to a local database for local development
+      "localConnectionString": "postgresql://user:password@localhost:5432/databasename"
     }
-  ]
+  ],
+
+  // Smart Placement: Run your Worker close to your database for lower latency
+  "placement": {
+    "region": "aws:us-east-1"
+  }
 }
